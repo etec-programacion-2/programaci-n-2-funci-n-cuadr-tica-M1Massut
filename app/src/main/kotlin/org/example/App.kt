@@ -5,6 +5,7 @@ package org.example
 
 fun main() {
     cuadratica()
+    valores_de_la_funcion()
 }
 
 fun cuadratica (){
@@ -17,4 +18,15 @@ fun cuadratica (){
     }
 
     println("La cuenta quedaria así ${a}x² + ${b}x + $c = y")
+}
+
+fun valores_de_la_funcion (){
+    val a = 5.0
+    val b = -3.0
+    val c = 6.0
+
+    for (x in -10..10) {
+        val y = a * x * x + b * x + c
+        println("f($x) = $y")
+    }
 }

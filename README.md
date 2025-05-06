@@ -15,7 +15,7 @@ Este proyecto consiste en desarrollar una aplicación en Kotlin que permita calc
 - [ ] Crear función main() para el programa
 - [ ] Definir los coeficientes a, b, c como constantes en el programa
 - [ ] Validar que 'a' no sea cero
-- [ ] Mostrar la función ingresada en formato ax² + bx + c
+- [ ] Mostrar la función ingresada en formato 
 
 **Commit**: "feat: Estructura básica y definición de coeficientes"
 
