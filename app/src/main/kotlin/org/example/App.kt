@@ -6,6 +6,7 @@ package org.example
 fun main() {
     cuadratica()
     valores_de_la_funcion()
+    raizes()
 }
 
 fun cuadratica (){
@@ -28,5 +29,23 @@ fun valores_de_la_funcion (){
     for (x in -10..10) {
         val y = a * x * x + b * x + c
         println("f($x) = $y")
+    }
+}
+fun raizes(){
+    val a = 5.0
+    val b = -3.0
+    val c = 6.0
+
+val raiz1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    val raiz2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+
+    println("Las raices son: $raiz1 y $raiz2")
+    if (raiz1 == raiz2) {
+        println("La ecuacion tiene una raiz doble")
+    } else {
+        println("La ecuacion tiene dos raices distintas")
+    }
+    if (b * b - 4 * a * c < 0.0) {
+        println("La ecuacion no tiene raices reales")
     }
 }
