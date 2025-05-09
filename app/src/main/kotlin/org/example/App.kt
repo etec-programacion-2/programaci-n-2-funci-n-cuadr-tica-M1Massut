@@ -32,20 +32,26 @@ fun valores_de_la_funcion (){
     }
 }
 fun raizes(){
-    val a = 5.0
-    val b = -3.0
-    val c = 6.0
+    var a = -5.02
+    var b = -3.09
+    var c = 6.03
 
-val raiz1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
-    val raiz2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+var raiz1 :Double= 0.0
+var raiz2 : Double= 0.0 
+var discriminante : Double = b * b - 4 * a * c 
+if (discriminante > 0) {
+    println("La ecuacion tiene dos raices reales distintas")
+    raiz1 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    println("Raiz uno:$raiz1") 
+    raiz2 =  (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    println("Raiz dos: $raiz2")
+} else if (discriminante == 0.0) {
+    println("La ecuacion tiene una raiz real doble")
+    println("Raiz uno:${(-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)}")
+} else {
+    println("La ecuacion no tiene raices reales")
+}
 
-    println("Las raices son: $raiz1 y $raiz2")
-    if (raiz1 == raiz2) {
-        println("La ecuacion tiene una raiz doble")
-    } else {
-        println("La ecuacion tiene dos raices distintas")
-    }
-    if (b * b - 4 * a * c < 0.0) {
-        println("La ecuacion no tiene raices reales")
-    }
+val dos_decimales = String.format("Raices: x₁ = %.2f, x₂ = %.2f", raiz1, raiz2)
+    println(dos_decimales)
 }
